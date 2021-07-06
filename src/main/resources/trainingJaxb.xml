@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<training>
+    <name>epam</name>
+    <modules>
+        <module>
+            <id>1</id>
+            <title>Collections</title>
+            <description>description of the collections module</description>
+            <publishDate>2021-06-15</publishDate>
+        </module>
+        <module>
+            <id>2</id>
+            <title>Streams</title>
+            <description>description of the streams module</description>
+            <publishDate>2021-06-20</publishDate>
+        </module>
+        <module>
+            <id>3</id>
+            <title>Tests</title>
+            <description>description of the tests module</description>
+            <publishDate>2021-06-25</publishDate>
+        </module>
+    </modules>
+</training>
