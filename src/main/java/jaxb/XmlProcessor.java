@@ -13,13 +13,10 @@ import java.io.*;
 public class XmlProcessor {
 
     public Training fromXml(InputStream xml) throws JAXBException {
-        Training training = new Training();
-
         JAXBContext jaxbContext = JAXBContext.newInstance(Training.class);
         Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 
-        training = (Training) jaxbUnmarshaller.unmarshal(xml);
-
+        Training training = (Training) jaxbUnmarshaller.unmarshal(xml);
 
         return training;
     }

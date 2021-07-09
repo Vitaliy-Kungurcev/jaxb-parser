@@ -54,6 +54,7 @@ public class ModuleTraining {
     }
 
     @XmlJavaTypeAdapter(value = LocalDateAdapter.class)
+    @XmlElement(name = "date")
     public void setPublishDate(LocalDate publishDate) {
         this.publishDate = publishDate;
     }
