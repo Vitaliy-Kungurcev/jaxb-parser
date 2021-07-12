@@ -1,10 +1,8 @@
 package jaxb.model;
 
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlElementWrapper;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.util.List;
 
 @XmlType(propOrder = {"name", "moduleTrainingList","levels"})
@@ -47,6 +45,8 @@ public class Training {
     public Levels getLevels() {
         return levels;
     }
+
+    @XmlJavaTypeAdapter(value = EnumAdapter.class)
     @XmlElement
     public void setLevels(Levels levels) {
         this.levels = levels;
@@ -71,5 +71,14 @@ public class Training {
         result = 31 * result + (moduleTrainingList != null ? moduleTrainingList.hashCode() : 0);
         result = 31 * result + (levels != null ? levels.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Training{" +
+                "name='" + name + '\'' +
+                ", moduleTrainingList=" + moduleTrainingList +
+                ", levels=" + levels +
+                '}';
     }
 }
